@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&family=Spectral:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+/* FUENTES 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Rubik Dirt', cursive;
+font-family: 'Share Tech Mono', monospace;
+font-family: 'Spectral', serif; 
+*/
+
+
+/* CONFIGURACION GENERAL */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.titulos {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.subtitulos {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.texto {
+  font-size: 18px;
+}
+
+/* CAPA PRESENTACION */
+.presentacion {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.presentacion video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.presentacion .container {
+  position: relative;
+  z-index: 2;
+}
+
+.presentacion .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.presentacion h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.presentacion p {
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.boton {
+  color: white;
+  font-size: 2rem;
+  padding-top: 1rem;
+  transition: color 0.4s ease;
+}
+
+.boton:hover {
+  color: #82AAE3;
+}
+
+/* HEADER */
+header {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.navbar {
+  background-color: #1b1b32;
+  padding: 0 20px;
+}
+
+.navbar-brand img {
+  height: 30px;
+}
+
+.nav-link {
+  /* color: #EAFDFC; */
+  transition: color 0.4s ease;
+}
+
+.nav-link:hover {
+  color: #82AAE3;
+}
+
+/* FOOTER */
+footer {
+  padding: 3rem 0 0.5rem 0;
+  background-color: black;
+  color: #EAFDFC;
+}
+
+footer .container ul {
+  padding: 10px 0;
+}
+footer .container ul li {
+  list-style: none;
+}
+footer .container ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s;
+}
+footer .container a:hover {
+  color: #82AAE3;
+}
+footer .iconos {
+  font-size: 15px;
+}
+
+
+footer .footer-copy {
+  margin-top: 50px;
+  padding-top: 1.5rem;
+  border-top: 1px solid gray;
+}
+
+/* -------------------------------------------------------------------------*/
+
+/* MAIN-INDEX */
+.hero-index {
+  background-image: url(../assets/img/hero-img.jpg);
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-index::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-index > * {
+  position: relative;
+  z-index: 100;
+}
+
+.valores {
+  padding: 50px 0;
+}
+
+.valores .card {
+  border: none;
+  padding: 1rem;
+}
+
+.valores-iconos {
+  color: rgb(152, 57, 57);
+}
+
+/* MAIN-CURSOS*/
+.hero-cursos {
+  background-image: url(../assets/img/fondo-cursos.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.hero-cursos > * {
+  z-index: 100;
+}
+
+.hero-cursos::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-info a {
+  color: white;
+  font-size: 2rem;
+  padding-top: 1rem;
+  align-self: center;
+}
+
+.cards-cursos .btn {
+  background-color: #28343e;
+  border-radius: 30px;
+  color: white;
+}
+
+.cards-cursos .btn:hover {
+  background-color: #364755;
+  color: #82AAE3;
+}
+
+
+.cards-cursos .card {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.cards-cursos .card:hover {
+  background-color: #82AAE3;
+  color: #28343e;
+  cursor: default;
+}
+
+.info-cursos .accordion-button {
+  background-color: #ffeae0;
+  color: rgb(152, 57, 57);
+}
+
+.info-cursos .accordion-button:focus {
+  box-shadow: 0 0 3px rgb(152, 57, 57);
+}
+
+.info-cursos .accordion-body {
+  background-color:  rgb(152, 57, 57);
+  color: #ffeae0;
+}
+
+/* MAIN-VIAJES */
+.hero-viajes {
+  background-image: url(../assets/img/fondo-viajes.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: white;
+  position: relative;
+}
+
+.hero-viajes > * {
+  z-index: 100;
+}
+
+.hero-viajes::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.cards-viajes .card {
+  /* max-width: 300px; */
+  transition: transform 0.4s ease;
+}
+
+.cards-viajes .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+-moz-box-shadow: 0px 0px 10px 1px rgba(97,97,97,0.75);
+}
+
+.cards-viajes .btn {
+  background-color: #28343e;
+  border-radius: 30px;
+  color: white;
+}
+
+.cards-viajes .btn:hover {
+  background-color: #364755;
+  color: #82AAE3;
+}
+
+/* CONTACTO */
+.hero-contacto {
+  background-image: url(../assets/img/fondo-contacto.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: white;
+  position: relative;
+}
+
+.hero-contacto > * {
+  z-index: 100;
+}
+
+.hero-contacto::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.info-contacto .btn {
+  background-color: rgb(152, 57, 57);
+  color: white;
+}
+
+.info-contacto .btn:hover {
+  background-color: rgb(180, 79, 79);
+}
+
+.info-contacto textarea {
+  resize: none;
+}
+
+.info-contacto input:focus,
+.info-contacto textarea:focus {
+  outline: none;
+}
+
+.info-contacto iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* ACERCA */
+.hero-acerca {
+  background-image: url(../assets/img/fondo-acerca.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: white;
+  position: relative;
+}
+
+.hero-acerca > * {
+  z-index: 100;
+}
+
+.hero-acerca::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.instructores .carrusel {
+  max-width: 800px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-imagen {
+  height: 250px;
+  width: 250px;
+  margin: 10px 10px 20px 10px;
+}
+
+.instructor-texto {
+  max-width: 70%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* MEDIA-QUERIES */
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .titulos {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    
+  }
+  
+  .subtitulos {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .texto {
+    font-size: 16px;
+  }
+  .navbar {
+    background-color: #1b1b32;
+    padding: 25px;
+  }
+  
+  .navbar-brand {
+    display: none;
+    }
+
+  .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .columna__modificar {
+    padding: 1.15rem 0;
+  }
+
+  .valores .card {
+    border: none;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+
+  .valores .card-text {
+    border-bottom: 1px solid rgb(189, 189, 189);
+    padding-bottom: 2rem;
+  }
+
+  .footer-copy {
+    flex-direction: column;
+    border: none;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+}
+
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
